@@ -1,9 +1,12 @@
-export function RepositoryItem() {
+export function RepositoryItem({ repository }) {
+  const { name, description, html_url } = repository;
   return (
     <li>
-      <strong>unform</strong>
-      <p>Forms in reactjs</p>
-      <a href="#">Acessar repositório</a>
+      <strong>{name}</strong>
+      <p>{description}</p>
+      <a href={html_url} target="_blank">
+        Access repository
+      </a>
     </li>
   );
 }
