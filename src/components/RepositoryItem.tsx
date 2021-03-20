@@ -1,4 +1,8 @@
-export function RepositoryItem({ repository }) {
+type RepositoryItemProps = {
+  repository: { name: string; description: string; html_url: string };
+};
+
+export function RepositoryItem({ repository }: RepositoryItemProps) {
   const { name, description, html_url } = repository;
   return (
     <li>
